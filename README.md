@@ -118,6 +118,10 @@ docker run -p 9001:9001 -d freefish-community-backend:v0.0.1
 
 ## 项目展示
 
+### 管理员
+
+### 用户
+
 #### 主页
 
 ![home.png](doc%2Fhome.png)
@@ -125,6 +129,14 @@ docker run -p 9001:9001 -d freefish-community-backend:v0.0.1
 #### 暗黑主题
 
 ![dark.png](doc%2Fdark.png)
+
+#### 注册
+
+![register.png](doc%2Fregister.png)
+
+#### 登录
+
+![login.png](doc%2Flogin.png)
 
 #### 文章详情
 

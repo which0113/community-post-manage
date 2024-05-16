@@ -13,15 +13,15 @@ import org.springframework.context.annotation.Bean;
 @MapperScan("com.which.freefish.mapper")
 @EnableCaching
 @SpringBootApplication
-public class FreefishApplication extends SpringBootServletInitializer {
+public class MainApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(FreefishApplication.class, args);
+        SpringApplication.run(MainApplication.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(FreefishApplication.class);
+        return builder.sources(MainApplication.class);
     }
 
     @Bean

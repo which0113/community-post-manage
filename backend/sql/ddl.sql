@@ -369,19 +369,19 @@ CREATE TABLE `ums_user` (
 -- ----------------------------
 INSERT INTO `ums_user`
 VALUES ('1349290158897311745', 'admin', 'admin', 'e10adc3949ba59abbe56e057f20f883e',
-        'https://sky-take-out-hjc.oss-cn-beijing.aliyuncs.com/freefish/log.jpg',
+        '',
         'admin6@qq.com', NULL, 999, '', '自由职业者', b'1', b'1', NULL, '2024-01-13 17:40:17', NULL);
 INSERT INTO `ums_user`
 VALUES ('1349618748226658305', 'll', 'll', 'e10adc3949ba59abbe56e057f20f883e',
-        'https://sky-take-out-hjc.oss-cn-beijing.aliyuncs.com/freefish/log.jpg',
+        '',
         'll@qq.com', NULL, 0, '', '自由职业者', b'1', b'1', NULL, '2024-02-13 17:40:17', NULL);
 INSERT INTO `ums_user`
 VALUES ('1332636310897664002', 'zs', 'zs', 'e10adc3949ba59abbe56e057f20f883e',
-        'https://sky-take-out-hjc.oss-cn-beijing.aliyuncs.com/freefish/log.jpg',
+        '',
         'zs@qq.com', NULL, 0, '', '自由职业者', b'1', b'1', NULL, '2024-03-13 17:40:17', NULL);
 INSERT INTO `ums_user`
 VALUES ('1317498859501797378', 'ww', 'ww', 'e10adc3949ba59abbe56e057f20f883e',
-        'https://sky-take-out-hjc.oss-cn-beijing.aliyuncs.com/freefish/log.jpg',
+        '',
         'ww@qq.com', NULL, 0, '', '自由职业者', b'1', b'1', NULL, '2024-04-13 17:40:17', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

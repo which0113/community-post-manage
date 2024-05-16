@@ -67,7 +67,8 @@
         ON t.user_id = u.id
         <where>
             <if test="keyword!=null">
-            # 进行模糊匹配 t.title 和 t.content
+                and (t.title like concat('%', #{keyword}, '%')
+                or t.content LIKE concat('%', #{keyword}, '%'))
             </if>
         </where>
         order by t.view desc, t.create_time desc

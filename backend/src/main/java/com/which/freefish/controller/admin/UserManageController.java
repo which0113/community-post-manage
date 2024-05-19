@@ -39,7 +39,9 @@ public class UserManageController extends BaseController {
     public ApiResult<Page<UserVO>> list(@RequestParam(value = "pageNo", defaultValue = "1") Integer pageNo,
                                         @RequestParam(value = "size", defaultValue = "10") Integer pageSize) {
         Page<UserVO> list = new Page<>();
-        Page<UmsUser> page = umsUserService.page(new Page<>(pageNo, pageSize));
+        LambdaQueryWrapper<UmsUser> wrapper = new LambdaQueryWrapper<>();
+        wrapper.orderByDesc(UmsUser::getModifyTime);
+        Page<UmsUser> page = umsUserService.page(new Page<>(pageNo, pageSize), wrapper);
         List<UserVO> collect = page.getRecords().stream().map(umsUser -> {
             UserVO userVO = new UserVO();
             BeanUtils.copyProperties(umsUser, userVO);

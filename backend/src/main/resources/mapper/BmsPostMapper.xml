@@ -19,24 +19,24 @@
 
     <select id="selectListAndPage" resultMap="topicVO">
         SELECT
-        t.id,t.title,t.user_id,t.comments,
-        t.view,t.collects,t.top,t.essence,
-        t.create_time ,t.modify_time ,
-        u.username,u.alias, u.avatar
+        t.id, t.title, t.user_id,
+        (SELECT COUNT(*) FROM bms_comment c WHERE c.topic_id = t.id) AS comments,
+        t.view, t.collects, t.top, t.essence,
+        t.create_time, t.modify_time,
+        u.username, u.alias, u.avatar
         FROM bms_post t
-        LEFT JOIN ums_user u
-        ON t.user_id = u.id
+        LEFT JOIN ums_user u ON t.user_id = u.id
         <where>
             <if test="tab == 'hot'">
-                date(t.create_time) &lt;= date_add(curdate(), interval 1 day)
-                and date(t.create_time) &gt;= date_sub(curdate(), interval 7 day)
+                AND date(t.modify_time) &lt;= date_add(curdate(), interval 1 day)
+                AND date(t.modify_time) &gt;= date_sub(curdate(), interval 7 day)
             </if>
         </where>
         <if test="tab != 'hot'">
-            order by t.create_time desc
+            ORDER BY t.modify_time DESC
         </if>
         <if test="tab == 'hot'">
-            order by t.view desc, t.create_time desc
+            ORDER BY t.view DESC, t.modify_time DESC
         </if>
     </select>
 
@@ -71,7 +71,7 @@
                 or t.content LIKE concat('%', #{keyword}, '%'))
             </if>
         </where>
-        order by t.view desc, t.create_time desc
+        order by t.view desc, t.modify_time desc
     </select>
 
     <select id="searchByKey2" resultMap="topicVO">
@@ -92,6 +92,6 @@
                  LEFT JOIN ums_user u
                            ON t.user_id = u.id
         where t.id in (${ids})
-        order by t.view desc, t.create_time desc
+        order by t.view desc, t.modify_time desc
     </select>
 </mapper>

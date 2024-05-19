@@ -16,6 +16,6 @@
         from bms_comment
                  join ums_user on ums_user.id = bms_comment.user_id
         where topic_id = #{topicid}
-        order by create_time desc
+        order by modify_time desc
     </select>
 </mapper>

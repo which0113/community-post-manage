@@ -90,8 +90,8 @@ docker run -p 80:80 -d freefish-community-frontend:v0.0.1
 
 #### 其他
 
-- [application-dev.yml](backend%2Fapplication-dev.yml)  文件可修改 **服务启动端口、MySQL、Redis 配置等等**
-- [ddl.sql](backend%2Fddl.sql) 文件是 MySQL 数据库文件，可  **Ctrl A 全选 + Ctrl Enter 执行** 快速初始化数据库
+- [application-dev.yml](backend%2Fsrc%2Fmain%2Fresources%2Fapplication-dev.yml) 文件可修改 **服务启动端口、MySQL、Redis 配置等等**
+- [ddl.sql](backend%2Fsql%2Fddl.sql) 文件是 MySQL 数据库文件，可  **Ctrl A 全选 + Ctrl Enter 执行** 快速初始化数据库
 - 管理员默认 **账号 | 密码** 为：**admin | 123456**
 
 #### 部署后端

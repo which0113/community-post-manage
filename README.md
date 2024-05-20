@@ -16,7 +16,7 @@
 
 ## 项目介绍
 
-社区文章管理系统基于SpringBoot + MyBatis + MySQL + Redis + Vue2 + ElementUI，实现了用户注册、登录、发帖、评论、关注、搜索等其他基础的文章增删改查功能。
+社区文章管理系统基于SpringBoot + MyBatis + MySQL + Redis + Vue2 + ElementUI，实现了用户注册、登录、发帖、评论、关注、搜索和管理员管理文章、用户的增删改查等功能。
 
 ## 使用指导
 

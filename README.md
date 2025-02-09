@@ -2,7 +2,7 @@
     <img src=doc/logo.png width=188/>
 </p>
 <h1 align="center">社区文章管理系统</h1>
-<p align="center"><strong>基于SpringBoot + MyBatis + MySQL + Redis + Vue2 + ElementUI 的社区文章管理系统</strong></p>
+<p align="center"><strong>基于 SpringBoot + MyBatis + MySQL + Redis + Vue2 + ElementUI 的社区文章管理系统</strong></p>
 <div align="center">
 <a target="_blank" href="https://github.com/which0113/api-backend">
     <img alt="" src="https://github.com/which0113/api-backend/badge/star.svg?theme=gvp"/>
